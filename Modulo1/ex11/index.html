@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Flexivel</title>
+</head>
+<body>
+    <h1>Fazendo imagem flexivel</h1>
+    <h2>Para a imagem se adequar ao navegador utilizado pelo cliente</h2>
+    <p>podemos utilizar a tag de html picture</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/imagem-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/imagem-m.png" type="image/png">
+        <img src="imagens/imagem-g.png" alt="imagem flexivel">
+    </picture>
+    <!--colocar 50px a mais do tamanho da imagem um source acima do outro colocando as três imagens neste exemplo 3 imagens 2 source 1 comando img para a imagem maior-->
+    <h1>Para reproduzir audio</h1>
+
+    <audio src="media/worse.mp3" controls ></audio>
+
+    <h1>Para hospedar videos</h1>
+    <video src="media/video1.mp4" width="560" height="315" controls autoplay loop ></video>
+
+    <video width="560" height="315" controls>
+        <source src="media/video1.mp4" type="video/mp4"> <!--Para colocar mais de um arquivo para que possa ser compativel com todos os arquivos colocar um source para cada arquivo o navegador vai tentar reproduzir o que estiver em primeiro e seguir na ordem tentando reproduzir-->
+        <source src="exemplooutroarquivo" type="video/outrotipo">
+        <p>uma mensagem de erro caso o navegador não consiga reproduzir</p>
+    </video>
+</body>
+</html>
